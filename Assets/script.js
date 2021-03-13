@@ -1,1 +1,3 @@
-    console.log("Hello World");
+
+var today = moment();
+("currentDay").text(today.format('dddd'));
