@@ -6,7 +6,17 @@ $('#currentDay').text(today.format('dddd'));
 const inpKey = document.getElementById("inpKey");
 const btnInsert = document.getElementById("btnInsert");
 const btnInsert10 = document.getElementById("btnInsert10");
-const btnInsert12 = document.getElementById("btnInsert12")
+const btnInsert12 = document.getElementById("btnInsert12");
+const btnInsert1 = document.getElementById("btnInsert1");
+const btnInsert2 = document.getElementById("btnInsert2");
+const btnInsert3 = document.getElementById("btnInsert3");
+const btnInsert4 = document.getElementById("btnInsert4");
+const btnInsert5 = document.getElementById("btnInsert5");
+const btnInsert6 = document.getElementById("btnInsert6");
+const btnInsert7 = document.getElementById("btnInsert7");
+const btnInsert8 = document.getElementById("btnInsert8");
+const btnInsert9pm = document.getElementById("btnInsert9pm");
+const btnInsert10pm = document.getElementById("btnInsert10pm");
 
 renderLastRegistered();
 
@@ -17,6 +27,18 @@ function renderLastRegistered() {
    $("#hour-9").val(localStorage.getItem("to-do"));
    $("#hour-10").val(localStorage.getItem("hour10"));
    $("#hour-12").val(localStorage.getItem("hour12"));
+   $("#hour-1").val(localStorage.getItem("hour1"));
+   $("#hour-2").val(localStorage.getItem("hour2"));
+   $("#hour-3").val(localStorage.getItem("hour3"));
+   $("#hour-4").val(localStorage.getItem("hour4"));
+   $("#hour-5").val(localStorage.getItem("hour5"));
+   $("#hour-6").val(localStorage.getItem("hour6"));
+   $("#hour-7").val(localStorage.getItem("hour7"));
+   $("#hour-8").val(localStorage.getItem("hour8"));
+   $("#hour-9pm").val(localStorage.getItem("hour9pm"));
+   $("#hour-10pm").val(localStorage.getItem("hour10pm"));
+   
+
 
 
 }
@@ -25,7 +47,7 @@ btnInsert.addEventListener("click", function(event) {
   event.preventDefault();
 
   var notes = document.querySelector('#hour-9').value;
-  console.log(notes);
+  
 
     localStorage.setItem("to-do", notes);
     renderLastRegistered();
@@ -38,7 +60,7 @@ btnInsert10.addEventListener("click", function(event) {
   event.preventDefault();
 
   var notes10 = document.querySelector('#hour-10').value;
-  console.log(notes10);
+  
 
     localStorage.setItem("hour10", notes10);
     renderLastRegistered();
@@ -47,11 +69,11 @@ btnInsert10.addEventListener("click", function(event) {
 );
 ;
 
-btnInsert10.addEventListener("click", function(event) {
+btnInsert12.addEventListener("click", function(event) {
   event.preventDefault();
 
   var notes12 = document.querySelector('#hour-12').value;
-  console.log(notes12);
+  
 
     localStorage.setItem("hour12", notes12);
     renderLastRegistered();
@@ -60,9 +82,135 @@ btnInsert10.addEventListener("click", function(event) {
 );
 ;
 
+btnInsert1.addEventListener("click", function(event) {
+  event.preventDefault();
 
+  var notes1 = document.querySelector('#hour-1').value;
+  
 
+    localStorage.setItem("hour1", notes1);
+    renderLastRegistered();
+  
+  }
+);
+;
 
+btnInsert2.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes2 = document.querySelector('#hour-2').value;
+  
+
+    localStorage.setItem("hour2", notes2);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert3.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes3 = document.querySelector('#hour-3').value;
+  
+
+    localStorage.setItem("hour3", notes3);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert4.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes4 = document.querySelector('#hour-4').value;
+  
+
+    localStorage.setItem("hour4", notes4);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert5.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes5 = document.querySelector('#hour-5').value;
+  
+
+    localStorage.setItem("hour5", notes5);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert6.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes6 = document.querySelector('#hour-6').value;
+  
+
+    localStorage.setItem("hour6", notes6);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert7.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes7 = document.querySelector('#hour-7').value;
+  
+
+    localStorage.setItem("hour7", notes7);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert8.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes8 = document.querySelector('#hour-8').value;
+  
+
+    localStorage.setItem("hour8", notes8);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert9pm.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes9pm = document.querySelector('#hour-9pm').value;
+  
+
+    localStorage.setItem("hour9pm", notes9pm);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert10pm.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes10pm = document.querySelector('#hour-10pm').value;
+  
+
+    localStorage.setItem("hour10pm", notes10pm);
+    renderLastRegistered();
+  
+  }
+);
+;
 
 // $(document).ready(function () {
 //   // listen for save button clicks
