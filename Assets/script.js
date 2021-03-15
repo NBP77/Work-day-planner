@@ -12,17 +12,22 @@ function renderLastRegistered() {
   var notes = localStorage.getItem("inpKey");
 
   inpKey.textContent = notes;
+   $("#hour-9").val(localStorage.getItem("to-do"));
 
 }
 
 btnInsert.addEventListener("click", function(event) {
   event.preventDefault();
 
-  var notes = document.querySelector('#inpKey').value;
+  var notes = document.querySelector('#hour-9').value;
+  console.log(notes);
 
-    localStorage.setItem("To do", notes);
+    localStorage.setItem("to-do", notes);
     renderLastRegistered();
+  
   }
 );
 ;
+
+
 
