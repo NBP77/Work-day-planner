@@ -2,10 +2,16 @@
 // Displays day at top of the page
 var today = moment();
 $('#currentDay').text(today.format('dddd'));
+console.log(today);
+
+// .css? .attr? Add or remove class? 
+
+$("#hour-9").parent().css("background-color", "yellow !important");
 
 const inpKey = document.getElementById("inpKey");
 const btnInsert = document.getElementById("btnInsert");
 const btnInsert10 = document.getElementById("btnInsert10");
+const btnInsert11 = document.getElementById("btnInsert11");
 const btnInsert12 = document.getElementById("btnInsert12");
 const btnInsert1 = document.getElementById("btnInsert1");
 const btnInsert2 = document.getElementById("btnInsert2");
@@ -21,11 +27,12 @@ const btnInsert10pm = document.getElementById("btnInsert10pm");
 renderLastRegistered();
 
 function renderLastRegistered() {
-  var notes = localStorage.getItem("inpKey");
+  // var notes = localStorage.getItem("inpKey");
 
-  inpKey.textContent = notes;
+  // inpKey.textContent = notes;
    $("#hour-9").val(localStorage.getItem("to-do"));
    $("#hour-10").val(localStorage.getItem("hour10"));
+   $("#hour-11").val(localStorage.getItem("hour11"));
    $("#hour-12").val(localStorage.getItem("hour12"));
    $("#hour-1").val(localStorage.getItem("hour1"));
    $("#hour-2").val(localStorage.getItem("hour2"));
@@ -63,6 +70,19 @@ btnInsert10.addEventListener("click", function(event) {
   
 
     localStorage.setItem("hour10", notes10);
+    renderLastRegistered();
+  
+  }
+);
+;
+
+btnInsert11.addEventListener("click", function(event) {
+  event.preventDefault();
+
+  var notes11 = document.querySelector('#hour-11').value;
+  
+
+    localStorage.setItem("hour11", notes11);
     renderLastRegistered();
   
   }
@@ -211,6 +231,8 @@ btnInsert10pm.addEventListener("click", function(event) {
   }
 );
 ;
+
+
 
 // $(document).ready(function () {
 //   // listen for save button clicks
